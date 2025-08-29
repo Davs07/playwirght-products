@@ -41,6 +41,26 @@ async function fetchProductsByBrand(brand) {
   return data;
 }
 
+async function fetchProductByUPC(upc) {
+  const { data, error } = await supabase
+    .from('productos')
+    .select('*')
+    .eq('upc', upc)
+    .single();  // Esperamos un solo resultado
+    
+  if (error) {
+    if (error.code === 'PGRST116') {
+      // No se encontró el producto
+      console.log(`No se encontró producto con UPC: ${upc}`);
+      return null;
+    }
+    console.error('Error fetching product by UPC:', error);
+    return null;
+  }
+  
+  return data;
+}
+
 async function searchProducts(searchTerm) {
   const { data, error } = await supabase
     .from('productos')
@@ -57,16 +77,21 @@ async function searchProducts(searchTerm) {
 
 // Ejemplo de uso
 async function main() {
-  console.log("Fetching products...");
-  const products = await fetchProducts();
-  console.log("Products:", products);
+  // console.log("Fetching products...");
+  // const products = await fetchProducts();
+  // console.log("Products:", products);
   
-  console.log("\nSearching for 'coca cola'...");
-  const cocaColaProducts = await searchProducts('coca cola');
-  console.log("Coca Cola products:", cocaColaProducts);
+  // console.log("\nSearching for 'coca cola'...");
+  // const cocaColaProducts = await searchProducts('coca cola');
+  // console.log("Coca Cola products:", cocaColaProducts);
+  
+  console.log("\nSearching product by UPC ...");
+  const productByUPC = await fetchProductByUPC('7804672821986');
+  console.log("Product by UPC:", productByUPC);
+  
 }
 
 // Descomenta para ejecutar el ejemplo
 main().catch(console.error);
 
-export { fetchProducts, fetchProductsByBrand, searchProducts };
+export { fetchProducts, fetchProductsByBrand, fetchProductByUPC, searchProducts };
