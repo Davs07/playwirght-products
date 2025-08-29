@@ -1,0 +1,37 @@
+[
+  {
+    "nombre": "Aceite friol balde 18 L",
+    "sku": "70053248419946",
+    "precio": "S/ 145.00",
+    "imagen": "https://dojiw2m9tvv09.cloudfront.net/53648/product/M_copia-de-gr9816.png?76&time=1756442069",
+    "url": "https://www.rol.com.pe/product/aceite-friol-balde-18-l"
+  },
+  {
+    "nombre": "Ayudin liquido 2.6 LT",
+    "sku": "7506339399479",
+    "precio": "S/ 35.00",
+    "imagen": "https://dojiw2m9tvv09.cloudfront.net/53648/product/M_201463014525.jpg?76&time=1756442072",
+    "url": "https://www.rol.com.pe/product/ayudin-liquido-2-6-lt"
+  },
+  {
+    "nombre": "Cj alacena ketchup personal 8 gr x 250 un.",
+    "sku": "66801769049790",
+    "precio": "S/ 38.00",
+    "imagen": "https://dojiw2m9tvv09.cloudfront.net/53648/product/M_copia-de-copia-de-dise-o-sin-t-tulo-72198.png?76&time=1756442073",
+    "url": "https://www.rol.com.pe/product/cj-alacena-ketchup-personal-8-gr-x-250-un"
+  },
+  {
+    "nombre": "Cj alacena MAYONESA personal 8 gr x 250 uni",
+    "sku": "66802089256754",
+    "precio": "S/ 60.00",
+    "imagen": "https://dojiw2m9tvv09.cloudfront.net/53648/product/M_copia-de-copia-de-dise-o-sin-t-tulo-91588.png?76&time=1756442074",
+    "url": "https://www.rol.com.pe/product/cj-alacena-mayonesa-personal-8-gr-x-250-uni"
+  },
+  {
+    "nombre": "Cj alacena MOSTAZA personal 8 gr x 250 un",
+    "sku": "66801798696175",
+    "precio": "S/ 38.00",
+    "imagen": "https://dojiw2m9tvv09.cloudfront.net/53648/product/M_copia-de-copia-de-dise-o-sin-t-tulo-87841.png?76&time=1756442075",
+    "url": "https://www.rol.com.pe/product/cj-alacena-mostaza-personal-8-gr-x-250-un"
+  }
+]

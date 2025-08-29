@@ -127,7 +127,7 @@ async function scrapeProducto(page, url) {
 
 // -------- Runner --------
 (async () => {
-  const urls = cargarUrls(INPUT)
+  const urls = cargarUrls(INPUT).slice(0, 5); // Limitar a los primeros 5 productos
 
   // Reanudar si hay parciales
   const parciales = cargarParciales(OUTPUT);
