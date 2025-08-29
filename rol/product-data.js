@@ -2,12 +2,8 @@ import { chromium } from "playwright";
 import fs from "fs";
 
 // Uso: node scraper_detalle_producto.js [input.json] [output.json]
-// - input.json puede ser:
-//   a) salida de productos_por_categoria.json (array de categorías con productos[{url}])
-//   b) array de strings con URLs
-//   c) array de objetos { url: "..." }
-const INPUT = process.argv[2] || "rol/productos_por_categoria.json";
-const OUTPUT = process.argv[3] || "rol/detalles_productos.json";
+const INPUT = process.argv[2] || "datas/productos_por_categoria.json";
+const OUTPUT = process.argv[3] || "rol/detalles_productos-sku.json";
 
 // -------- Utilidades de entrada/salida --------
 function cargarUrls(filePath) {
@@ -58,19 +54,23 @@ async function scrapeProducto(page, url) {
     throw new Error(`Fallo de navegación: ${resp?.status()} ${resp?.statusText()}`);
   }
 
-  // Título debería estar estático
+  // Espera título (estático)
   await page.waitForSelector("h1.bs-product__title, [data-bs='product.detail'] h1", {
     state: "visible",
     timeout: 15000,
   });
 
-  // Único contenido dinámico: SKU
-  await page.waitForSelector(".bs-product__sku, [data-bs='product.sku']", {
-    state: "attached",
-    timeout: 15000,
-  });
+  // Espera a que el SKU tenga contenido (no solo el nodo). Acepta texto con dígitos o fallback en slider[data-info].
+  await page.waitForFunction(() => {
+    const skuEl = document.querySelector(".bs-product__sku,[data-bs='product.sku']");
+    const txt = (skuEl?.textContent || "").trim();
+    const sliderItem = document.querySelector("#bs-product-slider .item[data-info]");
+    const sliderCode = sliderItem?.getAttribute("data-info") || "";
+    const hasSkuText = /\d{5,}/.test(txt); // 5+ dígitos
+    const hasSliderCode = /\d{5,}/.test(sliderCode);
+    return hasSkuText || hasSliderCode;
+  }, { timeout: 20000 }).catch(() => { /* seguimos intentando extraer aunque no se cumpla */ });
 
-  // Extraer datos
   const data = await page.evaluate(() => {
     const q = (sel) => document.querySelector(sel);
     const text = (sel) => q(sel)?.textContent?.trim() || null;
@@ -81,40 +81,53 @@ async function scrapeProducto(page, url) {
       text("[data-bs='product.detail'] h1") ||
       null;
 
-    let sku =
+    // Intento 1: SKU por texto visible
+    let skuRaw =
       text(".bs-product__sku") ||
       text("[data-bs='product.sku']") ||
       null;
-    sku = sku ? sku.replace(/SKU:\s*/i, "").trim() : null;
 
-    // Precio: normalmente estático en el DOM
+    // Limpieza de prefijos comunes
+    let sku = skuRaw ? skuRaw.replace(/^(SKU|C[oó]digo|EAN)\s*[:：]?\s*/i, "").trim() : null;
+
+    // Intento 2 (fallback): tomar data-info del primer slide si parece un código
+    if (!sku || !/\d{5,}/.test(sku)) {
+      const sliderCode = attr("#bs-product-slider .item[data-info]", "data-info");
+      if (sliderCode && /\d{5,}/.test(sliderCode)) {
+        sku = sliderCode.trim();
+      }
+    }
+
+    // Precio final
     const precio =
       text("[data-bs='product.finalPrice']") ||
       text(".bs-product__final-price") ||
       null;
 
-    // Imagen principal (slider)
-    let imagen =
+    // Imagen principal
+    const imagen =
       attr("#bs-product-slider img", "src") ||
       attr(".bs-img-square img", "src") ||
       attr("#bs-product-slider img", "data-src") ||
       null;
 
-    // URL absoluta del producto
     const url = window.location.href;
 
-    return { nombre, sku, precio, imagen, url };
-  });
+    // Para depuración: en caso de no SKU, devolver los crudos
+    const debug = (!sku) ? {
+      skuRaw: skuRaw || null,
+      sliderCode: attr("#bs-product-slider .item[data-info]", "data-info") || null
+    } : undefined;
 
-  // Normalización opcional del precio (extrae número), por si lo quieres
-  // const precioNumero = data.precio ? Number((data.precio.replace(/[^\d.,]/g, "").replace(",", "."))) : null;
+    return { nombre, sku, precio, imagen, url, ...(debug ? { debug } : {}) };
+  });
 
   return data;
 }
 
 // -------- Runner --------
 (async () => {
-  const urls = cargarUrls(INPUT);
+  const urls = cargarUrls(INPUT)
 
   // Reanudar si hay parciales
   const parciales = cargarParciales(OUTPUT);
@@ -134,7 +147,7 @@ async function scrapeProducto(page, url) {
     try {
       const info = await scrapeProducto(page, url);
       resultados.push(info);
-      console.log(`[${i}/${pendientes.length}] OK -> ${info?.nombre || "(sin título)"} | ${url}`);
+      console.log(`[${i}/${pendientes.length}] OK -> ${info?.nombre || "(sin título)"} | SKU: ${info?.sku || "null"} | ${url}`);
     } catch (err) {
       console.warn(`[${i}/${pendientes.length}] ERROR -> ${url} | ${err?.message || err}`);
       resultados.push({ nombre: null, sku: null, precio: null, imagen: null, url, error: String(err?.message || err) });
