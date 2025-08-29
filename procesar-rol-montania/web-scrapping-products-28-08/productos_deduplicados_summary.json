@@ -1,0 +1,21 @@
+{
+  "timestamp": "2025-08-29T03:39:22.313Z",
+  "criteria": {
+    "name": "Montaña (preferencia)",
+    "brand": "Montaña (preferencia)",
+    "image": "ROL (preferencia)",
+    "price": "Más económico",
+    "url": "Montaña (preferencia)"
+  },
+  "statistics": {
+    "duplicatesProcessed": 415,
+    "duplicatesRemoved": 416,
+    "originalCount": 4646,
+    "finalCount": 4230
+  },
+  "composition": {
+    "merged": 415,
+    "montania": 2805,
+    "rol": 1010
+  }
+}
