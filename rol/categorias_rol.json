@@ -1,0 +1,617 @@
+[
+  {
+    "nombre": "Línea Restaurantes",
+    "url": "/collection/linea-restaurantes",
+    "subcategorias": []
+  },
+  {
+    "nombre": "Abarrotes",
+    "url": "#",
+    "subcategorias": [
+      {
+        "nombre": "Accesorios de cocina",
+        "url": "/collection/accesorios-de-cocina",
+        "subcategorias": []
+      },
+      {
+        "nombre": "Para el desayuno",
+        "url": "#",
+        "subcategorias": [
+          {
+            "nombre": "Cafés / chocolates",
+            "url": "/collection/cafes-chocolates"
+          },
+          {
+            "nombre": "Avenas",
+            "url": "/collection/avenas"
+          },
+          {
+            "nombre": "Filtrantes",
+            "url": "/collection/filtrantes"
+          },
+          {
+            "nombre": "Embutidos / similares",
+            "url": "/collection/embutidos-similares"
+          },
+          {
+            "nombre": "Mantequilla / margarinas",
+            "url": "/collection/mantequillas-margarinas"
+          },
+          {
+            "nombre": "Quesos",
+            "url": "/collection/quesos"
+          },
+          {
+            "nombre": "Leches / lácteos",
+            "url": "/collection/leches-lacteos"
+          },
+          {
+            "nombre": "Cremas",
+            "url": "/collection/cremas"
+          },
+          {
+            "nombre": "Yogurts",
+            "url": "/collection/yogurts"
+          },
+          {
+            "nombre": "Mermelada / similares",
+            "url": "/collection/mermeladas-similares"
+          }
+        ]
+      },
+      {
+        "nombre": "Condimentos",
+        "url": "#",
+        "subcategorias": [
+          {
+            "nombre": "Condimentos / saborizantes",
+            "url": "/collection/condimentos-saborizantes"
+          },
+          {
+            "nombre": "Especias",
+            "url": "/collection/especias"
+          }
+        ]
+      },
+      {
+        "nombre": "Conservas",
+        "url": "#",
+        "subcategorias": [
+          {
+            "nombre": "Conservas de pescado",
+            "url": "/collection/conservas-de-pescado"
+          },
+          {
+            "nombre": "Conservas de durazno",
+            "url": "/collection/conservas-de-durazno"
+          }
+        ]
+      },
+      {
+        "nombre": "Instantáneos",
+        "url": "#",
+        "subcategorias": [
+          {
+            "nombre": "Sopas / cremas",
+            "url": "/collection/pure-similares"
+          }
+        ]
+      },
+      {
+        "nombre": "Para la cocina",
+        "url": "#",
+        "subcategorias": [
+          {
+            "nombre": "Arroz / azúcar",
+            "url": "/collection/arroz-azucar"
+          },
+          {
+            "nombre": "Aceites",
+            "url": "/collection/aceites"
+          },
+          {
+            "nombre": "Huevos",
+            "url": "/collection/huevos"
+          },
+          {
+            "nombre": "Menestras / granos",
+            "url": "/collection/menestras-granos"
+          }
+        ]
+      },
+      {
+        "nombre": "Repostería",
+        "url": "#",
+        "subcategorias": [
+          {
+            "nombre": "Gelatinas",
+            "url": "/collection/gelatinas"
+          },
+          {
+            "nombre": "Harinas",
+            "url": "/collection/harinas"
+          },
+          {
+            "nombre": "Manjar / similares",
+            "url": "/collection/manjar-similares"
+          },
+          {
+            "nombre": "Repostería",
+            "url": "/collection/reposteria"
+          }
+        ]
+      },
+      {
+        "nombre": "Otros",
+        "url": "#",
+        "subcategorias": [
+          {
+            "nombre": "Velas",
+            "url": "/collection/velas"
+          },
+          {
+            "nombre": "Pilas",
+            "url": "/collection/pilas"
+          }
+        ]
+      },
+      {
+        "nombre": "Pastas / salsas",
+        "url": "/collection/pastas-salsas",
+        "subcategorias": []
+      },
+      {
+        "nombre": "Panadería",
+        "url": "/collection/panaderia",
+        "subcategorias": []
+      },
+      {
+        "nombre": "Cafés / chocolates",
+        "url": "/collection/cafes-chocolates"
+      },
+      {
+        "nombre": "Avenas",
+        "url": "/collection/avenas"
+      },
+      {
+        "nombre": "Filtrantes",
+        "url": "/collection/filtrantes"
+      },
+      {
+        "nombre": "Embutidos / similares",
+        "url": "/collection/embutidos-similares"
+      },
+      {
+        "nombre": "Mantequilla / margarinas",
+        "url": "/collection/mantequillas-margarinas"
+      },
+      {
+        "nombre": "Quesos",
+        "url": "/collection/quesos"
+      },
+      {
+        "nombre": "Leches / lácteos",
+        "url": "/collection/leches-lacteos"
+      },
+      {
+        "nombre": "Cremas",
+        "url": "/collection/cremas"
+      },
+      {
+        "nombre": "Yogurts",
+        "url": "/collection/yogurts"
+      },
+      {
+        "nombre": "Mermelada / similares",
+        "url": "/collection/mermeladas-similares"
+      },
+      {
+        "nombre": "Condimentos / saborizantes",
+        "url": "/collection/condimentos-saborizantes"
+      },
+      {
+        "nombre": "Especias",
+        "url": "/collection/especias"
+      },
+      {
+        "nombre": "Conservas de pescado",
+        "url": "/collection/conservas-de-pescado"
+      },
+      {
+        "nombre": "Conservas de durazno",
+        "url": "/collection/conservas-de-durazno"
+      },
+      {
+        "nombre": "Sopas / cremas",
+        "url": "/collection/pure-similares"
+      },
+      {
+        "nombre": "Arroz / azúcar",
+        "url": "/collection/arroz-azucar"
+      },
+      {
+        "nombre": "Aceites",
+        "url": "/collection/aceites"
+      },
+      {
+        "nombre": "Huevos",
+        "url": "/collection/huevos"
+      },
+      {
+        "nombre": "Menestras / granos",
+        "url": "/collection/menestras-granos"
+      },
+      {
+        "nombre": "Gelatinas",
+        "url": "/collection/gelatinas"
+      },
+      {
+        "nombre": "Harinas",
+        "url": "/collection/harinas"
+      },
+      {
+        "nombre": "Manjar / similares",
+        "url": "/collection/manjar-similares"
+      },
+      {
+        "nombre": "Repostería",
+        "url": "/collection/reposteria"
+      },
+      {
+        "nombre": "Velas",
+        "url": "/collection/velas"
+      },
+      {
+        "nombre": "Pilas",
+        "url": "/collection/pilas"
+      }
+    ]
+  },
+  {
+    "nombre": "Bebidas",
+    "url": "#",
+    "subcategorias": [
+      {
+        "nombre": "Agua",
+        "url": "/collection/agua",
+        "subcategorias": []
+      },
+      {
+        "nombre": "Gaseosas",
+        "url": "/collection/gaseosas",
+        "subcategorias": []
+      },
+      {
+        "nombre": "Energizantes",
+        "url": "/collection/energizantes",
+        "subcategorias": []
+      },
+      {
+        "nombre": "Jugos",
+        "url": "/collection/jugos",
+        "subcategorias": []
+      },
+      {
+        "nombre": "Refrescos en polvo",
+        "url": "/collection/refrescos-en-sobre-polvo",
+        "subcategorias": []
+      }
+    ]
+  },
+  {
+    "nombre": "Descartables",
+    "url": "/collection/descartables",
+    "subcategorias": []
+  },
+  {
+    "nombre": "Mascotas",
+    "url": "#",
+    "subcategorias": [
+      {
+        "nombre": "Para perros",
+        "url": "/collection/para-perros",
+        "subcategorias": []
+      },
+      {
+        "nombre": "Para gatos",
+        "url": "/collection/para-gatos",
+        "subcategorias": []
+      },
+      {
+        "nombre": "Para conejos",
+        "url": "/collection/para-conejos",
+        "subcategorias": []
+      },
+      {
+        "nombre": "Para aves",
+        "url": "/collection/para-aves",
+        "subcategorias": []
+      },
+      {
+        "nombre": "Arena p/gato",
+        "url": "/collection/arena-p-gato",
+        "subcategorias": []
+      }
+    ]
+  },
+  {
+    "nombre": "Limpieza",
+    "url": "#",
+    "subcategorias": [
+      {
+        "nombre": "Ambientadores",
+        "url": "/collection/ambientadores-superficies",
+        "subcategorias": []
+      },
+      {
+        "nombre": "Aseo de la cocina",
+        "url": "#",
+        "subcategorias": [
+          {
+            "nombre": "Aseo de la cocina",
+            "url": "/collection/aseo-cocina"
+          },
+          {
+            "nombre": "Guantes",
+            "url": "/collection/guantes"
+          },
+          {
+            "nombre": "Paños / secadores",
+            "url": "/collection/panos-secadores"
+          },
+          {
+            "nombre": "Trapeadores / mopas",
+            "url": "/collection/trapeadores-mopas"
+          },
+          {
+            "nombre": "Lavavajillas",
+            "url": "/collection/lavavajillas-pastas-liquidas"
+          }
+        ]
+      },
+      {
+        "nombre": "Aseo del baño",
+        "url": "#",
+        "subcategorias": [
+          {
+            "nombre": "Aseo del baño",
+            "url": "/collection/aseo-bano"
+          },
+          {
+            "nombre": "Guantes",
+            "url": "/collection/guantes"
+          },
+          {
+            "nombre": "Lejía / quitamanchas",
+            "url": "/collection/lejias-quitamanchas"
+          },
+          {
+            "nombre": "Trapeadores / mopas",
+            "url": "/collection/trapeadores-mopas"
+          }
+        ]
+      },
+      {
+        "nombre": "Ceras",
+        "url": "/collection/ceras",
+        "subcategorias": []
+      },
+      {
+        "nombre": "Detergentes",
+        "url": "#",
+        "subcategorias": [
+          {
+            "nombre": "Detergentes en polvo",
+            "url": "/collection/detergentes"
+          },
+          {
+            "nombre": "Detergente líquido",
+            "url": "/collection/detergentes-liquidos"
+          }
+        ]
+      },
+      {
+        "nombre": "Escobas / recogedores",
+        "url": "/collection/escobas-recogedores",
+        "subcategorias": []
+      },
+      {
+        "nombre": "Esponjas",
+        "url": "/collection/esponjas",
+        "subcategorias": []
+      },
+      {
+        "nombre": "Insecticidas",
+        "url": "/collection/insecticidas",
+        "subcategorias": []
+      },
+      {
+        "nombre": "Para las prendas",
+        "url": "#",
+        "subcategorias": [
+          {
+            "nombre": "Suavizantes / enjuagues",
+            "url": "/collection/suavizantes-enjuagues"
+          },
+          {
+            "nombre": "Lejía / quitamanchas",
+            "url": "/collection/lejias-quitamanchas"
+          },
+          {
+            "nombre": "Jabón en barra",
+            "url": "/collection/jabon-en-barra"
+          }
+        ]
+      },
+      {
+        "nombre": "Aseo de la cocina",
+        "url": "/collection/aseo-cocina"
+      },
+      {
+        "nombre": "Guantes",
+        "url": "/collection/guantes"
+      },
+      {
+        "nombre": "Paños / secadores",
+        "url": "/collection/panos-secadores"
+      },
+      {
+        "nombre": "Trapeadores / mopas",
+        "url": "/collection/trapeadores-mopas"
+      },
+      {
+        "nombre": "Lavavajillas",
+        "url": "/collection/lavavajillas-pastas-liquidas"
+      },
+      {
+        "nombre": "Aseo del baño",
+        "url": "/collection/aseo-bano"
+      },
+      {
+        "nombre": "Guantes",
+        "url": "/collection/guantes"
+      },
+      {
+        "nombre": "Lejía / quitamanchas",
+        "url": "/collection/lejias-quitamanchas"
+      },
+      {
+        "nombre": "Trapeadores / mopas",
+        "url": "/collection/trapeadores-mopas"
+      },
+      {
+        "nombre": "Detergentes en polvo",
+        "url": "/collection/detergentes"
+      },
+      {
+        "nombre": "Detergente líquido",
+        "url": "/collection/detergentes-liquidos"
+      },
+      {
+        "nombre": "Suavizantes / enjuagues",
+        "url": "/collection/suavizantes-enjuagues"
+      },
+      {
+        "nombre": "Lejía / quitamanchas",
+        "url": "/collection/lejias-quitamanchas"
+      },
+      {
+        "nombre": "Jabón en barra",
+        "url": "/collection/jabon-en-barra"
+      }
+    ]
+  },
+  {
+    "nombre": "Aseo personal",
+    "url": "#",
+    "subcategorias": [
+      {
+        "nombre": "Alcohol / gel",
+        "url": "/collection/alcohol-gel",
+        "subcategorias": []
+      },
+      {
+        "nombre": "Cepillos dentales",
+        "url": "/collection/cepillos-dentales",
+        "subcategorias": []
+      },
+      {
+        "nombre": "Jabón de tocador",
+        "url": "/collection/jabon-corporal",
+        "subcategorias": []
+      },
+      {
+        "nombre": "Jabón líquido",
+        "url": "/collection/jabon-liquido",
+        "subcategorias": []
+      },
+      {
+        "nombre": "Máquinas de afeitar",
+        "url": "/collection/maquinas-de-afeitar",
+        "subcategorias": []
+      },
+      {
+        "nombre": "Pasta dental",
+        "url": "/collection/pastas-dentales",
+        "subcategorias": []
+      },
+      {
+        "nombre": "Toalla higiénicas / diarios",
+        "url": "/collection/toallas-higienicas-diarios",
+        "subcategorias": []
+      },
+      {
+        "nombre": "Toallitas húmedas",
+        "url": "/collection/toallitas-humedas",
+        "subcategorias": []
+      },
+      {
+        "nombre": "Shampoo / acondicionador",
+        "url": "/collection/shampo-acondicionador",
+        "subcategorias": []
+      },
+      {
+        "nombre": "Pañal para adulto",
+        "url": "/collection/panales-para-adulto",
+        "subcategorias": []
+      },
+      {
+        "nombre": "Otros",
+        "url": "/collection/otros-aseo-personal",
+        "subcategorias": []
+      }
+    ]
+  },
+  {
+    "nombre": "Golosinas",
+    "url": "#",
+    "subcategorias": [
+      {
+        "nombre": "Chocolatería",
+        "url": "/collection/chocolateria",
+        "subcategorias": []
+      },
+      {
+        "nombre": "Caramelos",
+        "url": "/collection/caramelos",
+        "subcategorias": []
+      },
+      {
+        "nombre": "Cereales",
+        "url": "/collection/cereales",
+        "subcategorias": []
+      },
+      {
+        "nombre": "Galletas",
+        "url": "/collection/galletas",
+        "subcategorias": []
+      },
+      {
+        "nombre": "Wafers",
+        "url": "/collection/wafers",
+        "subcategorias": []
+      }
+    ]
+  },
+  {
+    "nombre": "Papelería",
+    "url": "#",
+    "subcategorias": [
+      {
+        "nombre": "Papel higiénico",
+        "url": "/collection/papel-higienico",
+        "subcategorias": []
+      },
+      {
+        "nombre": "Papel toalla",
+        "url": "/collection/papel-toalla",
+        "subcategorias": []
+      },
+      {
+        "nombre": "Servilletas",
+        "url": "/collection/servilletas",
+        "subcategorias": []
+      }
+    ]
+  }
+]
